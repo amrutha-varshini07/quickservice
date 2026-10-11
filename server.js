@@ -8,6 +8,9 @@ const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`QuickServe backend running on port ${PORT}`);
+});
 const MONGODB_URI = process.env.MONGODB_URI;
 
 // Middleware
