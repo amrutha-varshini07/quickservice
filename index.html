@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickServe Food Ordering System - Order delicious meals delivered hot and fresh to your doorstep in minutes.">
+  <meta name="keywords" content="food delivery, QuickServe, online food ordering, Indian food, pizza, biryani, fast food">
+  <title>QuickServe | Fast & Fresh Food Ordering</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for clean modern icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo" id="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+        <span class="logo-text">Quick<span>Serve</span></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#features" class="nav-link">Why Us</a>
+        <a href="#checkout-section" class="nav-link">Checkout</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Live Cart Toggle Button -->
+        <button class="cart-btn" id="open-cart-btn" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-label">Cart</span>
+          <span class="cart-badge" id="nav-cart-count">0</span>
+        </button>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Home Section -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-bolt"></i> 30-Minute Guaranteed Delivery
+          </div>
+          <h1 class="hero-title">
+            Craving Great Food? <br>
+            <span>We Deliver It Fresh & Fast.</span>
+          </h1>
+          <p class="hero-desc">
+            Explore authentic Indian curries, aromatic biryanis, cheesy pizzas, and refreshing drinks prepared by top chefs and delivered piping hot to your doorstep.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-primary" id="hero-menu-cta">
+              <i class="fa-solid fa-utensils"></i> Explore Menu
+            </a>
+            <a href="#checkout-section" class="btn btn-secondary">
+              <i class="fa-solid fa-receipt"></i> View Order
+            </a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight-item">
+              <span class="highlight-num">500+</span>
+              <span class="highlight-txt">Daily Orders</span>
+            </div>
+            <div class="highlight-separator"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">4.9 ★</span>
+              <span class="highlight-txt">Customer Rating</span>
+            </div>
+            <div class="highlight-separator"></div>
+            <div class="highlight-item">
+              <span class="highlight-num">₹0</span>
+              <span class="highlight-txt">Free Delivery > ₹500</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=700&q=80" 
+              alt="Delicious Italian Pizza" 
+              class="hero-main-img"
+              loading="eager"
+            >
+            <div class="floating-badge badge-top-right">
+              <div class="badge-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="badge-text">
+                <strong>Express 25m</strong>
+                <span>Average delivery</span>
+              </div>
+            </div>
+            <div class="floating-badge badge-bottom-left">
+              <div class="badge-icon flame"><i class="fa-solid fa-heart"></i></div>
+              <div class="badge-text">
+                <strong>100% Hygienic</strong>
+                <span>Safety standard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Food Menu Section -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Chef's Curated Selection</span>
+          <h2 class="section-title">Explore Our Delicious Menu</h2>
+          <p class="section-subtitle">Select your favorite dishes and add them to your cart with a single click</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="menu-filters-bar">
+          <div class="category-pills" id="category-pills">
+            <button class="filter-pill active" data-category="all">
+              <i class="fa-solid fa-border-all"></i> All Dishes
+            </button>
+            <button class="filter-pill" data-category="biryani">
+              <i class="fa-solid fa-bowl-rice"></i> Biryani & Rice
+            </button>
+            <button class="filter-pill" data-category="curry">
+              <i class="fa-solid fa-pepper-hot"></i> Main Curries
+            </button>
+            <button class="filter-pill" data-category="fastfood">
+              <i class="fa-solid fa-burger"></i> Fast Food
+            </button>
+            <button class="filter-pill" data-category="southindian">
+              <i class="fa-solid fa-plate-wheat"></i> South Indian
+            </button>
+            <button class="filter-pill" data-category="desserts">
+              <i class="fa-solid fa-ice-cream"></i> Desserts & Drinks
+            </button>
+            <button class="filter-pill" data-category="my-orders" id="my-orders-btn">
+              <i class="fa-solid fa-clock-rotate-left"></i> My Orders
+            </button>
+          </div>
+
+          <!-- Quick Search & Dietary Toggle -->
+          <div class="menu-search-toggle">
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="menu-search-input" placeholder="Search dishes (e.g., Paneer, Biryani)...">
+              <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="diet-filter">
+              <label class="toggle-switch" for="veg-only-toggle">
+                <input type="checkbox" id="veg-only-toggle">
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="diet-label"><span class="veg-dot"></span> Veg Only</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Food Items Grid -->
+        <div class="food-grid" id="food-grid">
+          <!-- Food cards populated dynamically by script.js -->
+        </div>
+
+        <!-- My Orders History Container -->
+        <div class="my-orders-container" id="my-orders-container" style="display: none;">
+          <!-- Customer order history populated dynamically by script.js -->
+        </div>
+
+        <!-- Empty Results Placeholder -->
+        <div class="empty-menu-state" id="empty-menu-state" style="display: none;">
+          <i class="fa-solid fa-plate-wheat empty-icon"></i>
+          <h3>No matching dishes found</h3>
+          <p>Try searching for a different keyword or switch off the filters.</p>
+          <button class="btn btn-secondary btn-sm" id="reset-filters-btn">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Features Section -->
+    <section class="features-section" id="features">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Our Promise</span>
+          <h2 class="section-title">Why Food Lovers Choose QuickServe</h2>
+          <p class="section-subtitle">Delivering the finest culinary experience with lightning-fast speed, authentic taste, and strict hygiene standards.</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
+            <div class="feature-info">
+              <h3>Superfast Delivery</h3>
+              <p>Hot and fresh meals dispatched directly to you.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+            <div class="feature-info">
+              <h3>Fresh Ingredients</h3>
+              <p>Locally sourced spices and authentic homestyle recipes.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+            <div class="feature-info">
+              <h3>Pocket Friendly</h3>
+              <p>Best value meals with transparent pricing in ₹ INR.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Shopping Cart & Checkout Split Section -->
+    <section class="checkout-section" id="checkout-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Easy Ordering</span>
+          <h2 class="section-title">Your Order & Delivery Details</h2>
+          <p class="section-subtitle">Review your selected items and complete your order information below.</p>
+        </div>
+
+        <div class="checkout-layout">
+          <!-- Cart Column -->
+          <div class="checkout-cart-col">
+            <div class="cart-box">
+              <div class="cart-box-header">
+                <h3><i class="fa-solid fa-cart-shopping"></i> Selected Items (<span id="cart-items-count">0</span>)</h3>
+                <button class="btn-text-danger" id="clear-cart-btn" title="Empty shopping cart">
+                  <i class="fa-regular fa-trash-can"></i> Clear All
+                </button>
+              </div>
+
+              <!-- Cart List Container -->
+              <div class="cart-items-list" id="cart-items-list">
+                <!-- Dynamically populated or empty notice -->
+              </div>
+
+              <!-- Bill Breakdown -->
+              <div class="cart-summary" id="cart-summary">
+                <div class="summary-line">
+                  <span>Subtotal</span>
+                  <span id="summary-subtotal">₹0</span>
+                </div>
+                <div class="summary-line">
+                  <span>Delivery Fee</span>
+                  <span id="summary-delivery">₹40</span>
+                </div>
+                <div class="summary-line fee-discount" id="free-delivery-badge" style="display: none;">
+                  <small><i class="fa-solid fa-gift"></i> Eligible for Free Delivery (Order > ₹500)</small>
+                </div>
+                <div class="summary-line">
+                  <span>GST & Restaurant Tax (5%)</span>
+                  <span id="summary-tax">₹0</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-line grand-total">
+                  <span>To Pay</span>
+                  <span id="summary-total">₹0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkout Details Form Column -->
+          <div class="checkout-form-col">
+            <div class="form-box">
+              <div class="form-box-header">
+                <h3><i class="fa-solid fa-location-dot"></i> Delivery Address & Contact</h3>
+                <p>Provide your details so our delivery partner can reach you smoothly.</p>
+              </div>
+
+              <form id="checkout-form" novalidate>
+                <!-- Full Name Field -->
+                <div class="form-group">
+                  <label for="cust-name">Full Name <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-user"></i>
+                    <input 
+                      type="text" 
+                      id="cust-name" 
+                      name="customerName" 
+                      placeholder="e.g. Rahul Sharma" 
+                      required 
+                      autocomplete="name"
+                    >
+                  </div>
+                  <span class="field-error" id="name-error">Please enter your full name (at least 3 characters).</span>
+                </div>
+
+                <!-- Phone Number Field -->
+                <div class="form-group">
+                  <label for="cust-phone">Phone Number <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-phone"></i>
+                    <input 
+                      type="tel" 
+                      id="cust-phone" 
+                      name="customerPhone" 
+                      placeholder="10-digit mobile number (e.g. 9876543210)" 
+                      required 
+                      autocomplete="tel"
+                    >
+                  </div>
+                  <span class="field-error" id="phone-error">Please enter a valid 10-digit mobile number.</span>
+                </div>
+
+                <!-- Delivery Address Field -->
+                <div class="form-group">
+                  <label for="cust-address">Delivery Address <span class="required">*</span></label>
+                  <div class="input-wrapper textarea-wrapper">
+                    <i class="fa-solid fa-house"></i>
+                    <textarea 
+                      id="cust-address" 
+                      name="customerAddress" 
+                      rows="3" 
+                      placeholder="House/Flat number, Building name, Street, Landmark, Area" 
+                      required
+                    ></textarea>
+                  </div>
+                  <span class="field-error" id="address-error">Please provide a complete delivery address.</span>
+                </div>
+
+                <!-- Delivery Note (Optional) -->
+                <div class="form-group">
+                  <label for="cust-notes">Cooking or Delivery Notes <span class="optional">(Optional)</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <input 
+                      type="text" 
+                      id="cust-notes" 
+                      name="customerNotes" 
+                      placeholder="e.g. Make it less spicy, leave at door"
+                    >
+                  </div>
+                </div>
+
+                <!-- Payment Option -->
+                <div class="form-group">
+                  <label>Payment Method</label>
+                  <div class="payment-options">
+                    <label class="payment-card selected">
+                      <input type="radio" name="paymentMethod" value="Cash on Delivery" checked>
+                      <div class="payment-card-content">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <div>
+                          <strong>Cash on Delivery (COD)</strong>
+                          <span>Pay in cash or UPI upon delivery</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+
+                <!-- Place Order Button -->
+                <button type="submit" class="btn btn-primary btn-block" id="place-order-btn">
+                  <i class="fa-solid fa-check"></i> Place Food Order (<span id="btn-total-preview">₹0</span>)
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Confirmation Modal / Section -->
+    <div class="modal-backdrop" id="confirmation-modal" role="dialog" aria-modal="true" style="display: none;">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="success-icon-badge">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h2 class="modal-title">Order Placed Successfully!</h2>
+          <p class="modal-subtitle">Thank you for ordering with QuickServe. Your meal is being prepared!</p>
+        </div>
+
+        <div class="modal-body" id="modal-order-summary">
+          <!-- Dynamically filled with order snapshot -->
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block" id="modal-new-order-btn">
+            <i class="fa-solid fa-plus"></i> Order More Food
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Slide-Over Cart Drawer (for easy access anywhere) -->
+    <div class="drawer-overlay" id="drawer-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="Quick Shopping Cart Drawer">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <i class="fa-solid fa-bag-shopping"></i> Your Cart (<span id="drawer-cart-count">0</span>)
+        </div>
+        <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Close Cart Drawer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="drawer-body" id="drawer-items-list">
+        <!-- Rendered cart items -->
+      </div>
+
+      <div class="drawer-footer" id="drawer-footer">
+        <div class="drawer-total-row">
+          <span>Total (incl. GST):</span>
+          <span class="drawer-grand-total" id="drawer-grand-total">₹0</span>
+        </div>
+        <a href="#checkout-section" class="btn btn-primary btn-block" id="drawer-checkout-btn">
+          Proceed to Checkout <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Floating Toast Notification System -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="brand-logo">
+          <span class="logo-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+          <span class="logo-text">Quick<span>Serve</span></span>
+        </a>
+        <p class="footer-tagline">
+          QuickServe Food Ordering System &copy; 2026. Built with modern semantic HTML, clean CSS, and vanilla JavaScript.
+        </p>
+      </div>
+      <div class="footer-meta">
+        <p><i class="fa-solid fa-code"></i> Ready for integration with <strong>Node.js</strong>, <strong>Express.js</strong>, & <strong>MongoDB</strong>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
